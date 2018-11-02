@@ -1,0 +1,49 @@
+{
+	"name": "b61/:package_name", 
+	"description": ":package_description", 
+	"keywords": ["b61", ":package_name"], 
+	"homepage": "https://github.com/nuclear-campaign/:package_name", 
+	"license": "MIT",
+	"authors": [
+		{
+			"name": ":author_name",
+			"email": ":author_email", 
+			"homepage": ":home_page", 
+			"role": "developer"
+		}
+	],
+	"require": {
+		"php": "^7.1"
+	},
+	"require-dev": {
+		"larapack/dd": "^1.0",
+        "phpunit/phpunit": "^7.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"B61\\Skeleton\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"B61\\Skeleton\\Tests\\": "tests"
+		}
+	}, 
+	"scripts": {
+		"test": "vendor/bin/phpunit", 
+		"test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+	}, 
+	"config": {
+		"sort-packages": true
+	}, 
+	"extra": {
+		"laravel": {
+			"providers": [
+				"B61\\Skeleton\\SkeletonServiceProvider"
+			], 
+			"aliases": {
+				"Skeleton": "B61\\Skeleton\\SkeletonFacade"
+			}
+		}
+	}
+}
